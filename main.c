@@ -10,14 +10,13 @@ void	print_numbers(int n, ...)
 	for (int i = 0; i < n; i++)
 	{
 		int	value = va_arg(list, int);
-		printf("%d: %d", i, value);
+		printf("%d: %d\n", i, value);
 	}
 
 	va_end(list);
 }
-
 int	main(void)
 {
-	print_numbers(2, 2, 2);
+	print_numbers(2, 2, 4);
 	return (0);
 }
