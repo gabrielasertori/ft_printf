@@ -14,7 +14,11 @@
 # define FT_PRINTF_H
 # include <stdarg.h>
 # include <stdlib.h>
+# include <unistd.h>
 
+int		ft_printf(const char *str, ...);
+int		ft_check_parameter(const char c, va_list arg);
+int		ft_putstr(const char *str);
 char	*ft_strchr(const char *string, int c);
 char	*ft_itoa_base(long num, int base);
 int		ft_print_c(va_list arg);
@@ -24,6 +28,5 @@ int		ft_print_u(va_list arg);
 int		ft_print_p(va_list arg);
 int		ft_print_x(va_list arg);
 int		ft_printf_X(va_list arg);
-int		ft_check_parameter(const char c, va_list arg);
 
 #endif
