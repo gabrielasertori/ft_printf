@@ -12,13 +12,15 @@
 
 #include "ft_printf.h"
 
-int	ft_check_parameter(const char *str, va_list arg);
+int	ft_check_parameter(const char c, va_list arg);
 
 int	ft_printf(const char *str, ...)
 {
 	int count;
 	va_list args;
 
+	if (!str)
+		return (NULL);
 	va_start(args, str);
 	count = 0;
 	while (str)
@@ -40,24 +42,24 @@ int	ft_printf(const char *str, ...)
 	return (count);
 }
 
-int	ft_check_parameter(const char *str, va_list arg)
+int	ft_check_parameter(const char c, va_list arg)
 {
 	int count;
 
 	count = 0;
-	if (str == 'c')
+	if (c == 'c')
 		count = ft_print_c(va_arg(arg, int));
-	else if (str == 's')
+	else if (c == 's')
 		count = ft_print_s(va_arg(arg, char *));
-	else if (str == 'd' || str == 'i')
+	else if (c == 'd' || c == 'i')
 		count = ft_print_int(va_arg(arg, int));
-	else if (str == 'u')
+	else if (c == 'u')
 		count = ft_print_u(va_arg(arg, unsigned int));
-	else if (str == 'p')
+	else if (c == 'p')
 		count = ft_print_p(va_arg(arg, unsigned int));
-	else if(str == 'x')
+	else if(c == 'x')
 		count = ft_print_x(va_arg(arg, unsigned int));
-	else if (str == 'X')
+	else if (c == 'X')
 		count = ft_printf_X(va_arg(arg, unsigned int));
 	else
 	{
