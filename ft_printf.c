@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
 int	ft_check_parameter(const char *str, va_list arg);
 
 int	ft_printf(const char *str, ...)
@@ -49,7 +51,7 @@ int	ft_check_parameter(const char *str, va_list arg)
 		count = ft_print_s(va_arg(arg, char *));
 	else if (str == 'd' || str == 'i')
 		count = ft_print_int(va_arg(arg, int));
-	else if (str == 'u')	
+	else if (str == 'u')
 		count = ft_print_u(va_arg(arg, unsigned int));
 	else if (str == 'p')
 		count = ft_print_p(va_arg(arg, unsigned int));

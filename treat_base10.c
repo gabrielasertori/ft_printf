@@ -10,6 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
+
+
+int	ft_print_u(va_list arg)
+{
+	int		count;
+	char	*str;
+
+	str = ft_itoa_base(arg, 10);
+	count = ft_putstr(str);
+	return (count);
+}
+
 int	ft_print_int(va_list arg)
 {
 	int		count;

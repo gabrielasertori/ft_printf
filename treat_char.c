@@ -10,13 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
+
 int	ft_print_c(va_list arg)
 {
-	write(1, &str, 1);
+	write(1, &arg, 1);
 	return (1);
 }
 
-int	ft_	print_s(va_list arg)
+int	ft_print_s(va_list arg)
 {
 	int	count;
 
