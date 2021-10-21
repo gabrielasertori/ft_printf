@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 18:46:41 by gcosta-d          #+#    #+#             */
-/*   Updated: 2021/10/21 18:49:57 by gcosta-d         ###   ########.fr       */
+/*   Created: 2021/10/21 19:48:27 by lkrebs-l          #+#    #+#             */
+/*   Updated: 2021/10/21 19:51:40 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 static size_t	ft_intlen(int n, int base);
 static char	*ft_strint(char *str, unsigned int len, long n, int base);
 
-
-char	*ft_itoa_base(int num, int base)
+char	*ft_itoa_base(long num, int base)
 {
 	unsigned int	len;
 	char			*str;
@@ -67,4 +66,3 @@ static char	*ft_strint(char *str, unsigned int len, long n, int base)
 	}
 	return (str);
 }
-
