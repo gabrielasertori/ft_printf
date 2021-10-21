@@ -12,8 +12,6 @@
 
 #include "ft_printf.h"
 
-
-
 int	ft_print_u(va_list arg)
 {
 	int		count;
