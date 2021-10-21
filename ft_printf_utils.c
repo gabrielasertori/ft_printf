@@ -6,7 +6,7 @@
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 23:01:18 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2021/10/21 19:57:29 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/10/21 20:10:54 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,16 @@ int	ft_putstr(const char *str)
 	return (count);
 }
 
+size_t	ft_strlen(const char *string)
+{
+	size_t	i;
+
+	i = 0;
+	while (string[i])
+		i++;
+	return (i);
+}
+
 char	*ft_strdup(const char *src)
 {
 	int		i;
@@ -51,14 +61,4 @@ char	*ft_strdup(const char *src)
 	}
 	dst[i] = '\0';
 	return (dst);
-}
-
-size_t	ft_strlen(const char *string)
-{
-	size_t	i;
-
-	i = 0;
-	while (string[i])
-		i++;
-	return (i);
 }
