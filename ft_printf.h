@@ -24,5 +24,6 @@ int		ft_print_u(va_list arg);
 int		ft_print_p(va_list arg);
 int		ft_print_x(va_list arg);
 int		ft_printf_X(va_list arg);
+int		ft_check_parameter(const char c, va_list arg);
 
 #endif
