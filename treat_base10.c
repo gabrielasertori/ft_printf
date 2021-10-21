@@ -25,12 +25,9 @@ int	ft_print_u(va_list arg)
 int	ft_print_int(va_list arg)
 {
 	int		count;
-	long	num;
 	char	*str;
 
-	num = arg;
-	count = 0;
-	str = ft_itoa_base(num, 10);
+	str = ft_itoa_base(arg, 10);
 	count = ft_putstr(str);
 	return (count);
 }

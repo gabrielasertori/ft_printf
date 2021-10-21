@@ -19,7 +19,7 @@ int	ft_printf(const char *str, ...)
 	int count;
 	va_list args;
 
-	if (!str)
+	if (!str || !args)
 		return (NULL);
 	va_start(args, str);
 	count = 0;
