@@ -6,7 +6,19 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 23:01:10 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2021/10/18 23:01:11 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2021/10/20 20:48:293 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_print_int(va_list arg)
+{
+	int		count;
+	long	num;
+	char	*str;
+
+	num = arg;
+	count = 0;
+	str = ft_itoa_base(num, 10);
+	count = ft_putstr(str);
+	return (count);
+}
