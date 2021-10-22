@@ -12,21 +12,21 @@
 
 #include "ft_printf.h"
 
-int	ft_print_c(va_list arg)
+int	ft_print_c(int c)
 {
-	write(1, &arg, 1);
+	write(1, &c, 1);
 	return (1);
 }
 
-int	ft_print_s(va_list arg)
+int	ft_print_s(char *str)
 {
 	int	count;
 
 	count = 0;
-	while (arg)
+	while (str)
 	{
-		write(1, &arg, 1);
-		arg++;
+		write(1, &str, 1);
+		str++;
 		count++;
 	}
 	return (count);

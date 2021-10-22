@@ -12,24 +12,21 @@
 
 #include "ft_printf.h"
 
-int	ft_check_parameter(const char c, va_list arg);
+int	ft_check_parameter(char c, va_list arg);
 
 int	ft_printf(const char *str, ...)
 {
 	int count;
 	va_list args;
 
-	if (!str || !args)
-		return (NULL);
+	if (!str) // !args or args == 0 ??
+		return (0);
 	va_start(args, str);
 	count = 0;
 	while (str)
 	{
-		if (*str == '%' && *str + 1 == ft_strchr(str, "cspudixX%"))
-		{
-			str++;
-			count = count + ft_check_parameter(&str, args);
-		}
+		if (*str == '%' && ft_strchr("cspudixX%", *str + 1))
+			count = count + ft_check_parameter(*str + 1, args);
 		else
 		{
 			write(1, &str, 1);
@@ -42,7 +39,7 @@ int	ft_printf(const char *str, ...)
 	return (count);
 }
 
-int	ft_check_parameter(const char c, va_list arg)
+int	ft_check_parameter(char c, va_list arg)
 {
 	int count;
 
@@ -60,11 +57,11 @@ int	ft_check_parameter(const char c, va_list arg)
 	else if(c == 'x')
 		count = ft_print_x(va_arg(arg, unsigned int));
 	else if (c == 'X')
-		count = ft_printf_X(va_arg(arg, unsigned int));
+		count = ft_print_X(va_arg(arg, unsigned int));
 	else
 	{
 		count++;
-		write(1, '%', 1);
+		write(1, "%", 1);
 	}
 	return (count);
 }

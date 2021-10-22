@@ -12,22 +12,22 @@
 
 #include "ft_printf.h"
 
-int	ft_print_u(va_list arg)
+int	ft_print_u(unsigned int num)
 {
 	int		count;
 	char	*str;
 
-	str = ft_itoa_base(arg, 10);
+	str = ft_itoa_base(num, 10);
 	count = ft_putstr(str);
 	return (count);
 }
 
-int	ft_print_int(va_list arg)
+int	ft_print_int(int decimal)
 {
 	int		count;
 	char	*str;
 
-	str = ft_itoa_base(arg, 10);
+	str = ft_itoa_base(decimal, 10);
 	count = ft_putstr(str);
 	return (count);
 }

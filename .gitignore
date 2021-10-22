@@ -2,3 +2,4 @@ a.out
 .vscode
 printf_repos/
 *.gch
+ft_printf.h.gch

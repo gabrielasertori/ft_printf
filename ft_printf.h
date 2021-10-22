@@ -17,19 +17,19 @@
 # include <unistd.h>
 
 int		ft_printf(const char *str, ...);
-int		ft_check_parameter(const char c, va_list arg);
+int		ft_check_parameter(char c, va_list arg);
 int		ft_putstr(const char *str);
 char	*ft_strchr(const char *string, int c);
 char	*ft_itoa_base(long num, int base);
-size_t	ft_strlen(const char *string)
-char	*ft_strdup(const char *src)
-int		ft_print_c(va_list arg);
-int		ft_print_s(va_list arg);
-int		ft_print_int(va_list arg);
-int		ft_print_u(va_list arg);
-int		ft_print_p(va_list arg);
-int		ft_print_x(va_list arg);
-int		ft_printf_X(va_list arg);
+size_t	ft_strlen(const char *string);
+char	*ft_strdup(const char *src);
+int		ft_print_c(int c);
+int		ft_print_s(char *str);
+int		ft_print_int(int decimal);
+int		ft_print_u(unsigned int num);
+int		ft_print_p(unsigned int pointer);
+int		ft_print_x(unsigned int hex);
+int		ft_print_X(unsigned int hex_upper);
 
 
 #endif

@@ -12,23 +12,23 @@
 
 #include "ft_printf.h"
 
-int	ft_print_x(va_list arg)
+int	ft_print_x(unsigned int hex)
 {
 	int count;
 	char *str;
 
-	str = ft_itoa_base(arg, 16);
+	str = ft_itoa_base(hex, 16);
 	count = ft_putstr(str);
 	return (count);
 }
 
-int	ft_print_X(va_list arg)
+int	ft_print_X(unsigned int hex_upper)
 {
 	int count;
 	char *str;
 	int	i;
 
-	str = ft_itoa_base(arg, 16);
+	str = ft_itoa_base(hex_upper, 16);
 	i = 0;
 	while (str[i])
 	{
@@ -40,14 +40,14 @@ int	ft_print_X(va_list arg)
 	return (count);
 }
 
-int	ft_print_p(va_list arg)
+int	ft_print_p(unsigned int pointer)
 {
 	int		count;
 	char	*str;
 
 	ft_putstr("0x");
-	count =
-	str = ft_itoa_base(arg, 16);
+	count = 2;
+	str = ft_itoa_base(pointer, 16);
 	count = ft_putstr(str);
 	return(count);
 }
