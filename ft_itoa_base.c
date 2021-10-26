@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 19:48:27 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2021/10/25 21:25:30 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2021/10/26 20:26:16 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ char	*ft_itoa_base(long num, int base)
 {
 	unsigned int	len;
 	char			*str;
+	char			*ret;
 
+	ret = ft_strdup("");
 	if (num == 0)
 		return (ft_strdup("0"));
 	if (num == -2147483648)
@@ -28,7 +30,11 @@ char	*ft_itoa_base(long num, int base)
 	str = (char *)malloc(len + 1 * sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	return (ft_strint(str, len, num, base));
+	ft_strint(str, len, num, base);
+	ft_strlcpy(ret, str, len + 1);
+	free(str);
+	return (ret);
+	//return (ft_strint(str, len, num, base));
 }
 
 static size_t	ft_intlen(int n, int base)

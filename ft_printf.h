@@ -23,6 +23,7 @@ char	*ft_strchr(const char *string, int c);
 char	*ft_itoa_base(long num, int base);
 size_t	ft_strlen(const char *string);
 char	*ft_strdup(const char *src);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 int		ft_print_c(int c);
 int		ft_print_s(char *str);
 int		ft_print_int(int decimal);
