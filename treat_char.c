@@ -23,9 +23,9 @@ int	ft_print_s(char *str)
 	int	count;
 
 	count = 0;
-	while (str)
+	while (*str)
 	{
-		write(1, &str, 1);
+		write(1, str, 1);
 		str++;
 		count++;
 	}

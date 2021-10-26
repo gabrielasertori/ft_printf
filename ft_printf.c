@@ -19,17 +19,20 @@ int	ft_printf(const char *str, ...)
 	int count;
 	va_list args;
 
-	if (!str) // !args or args == 0 ??
+	if (!str)
 		return (0);
 	va_start(args, str);
 	count = 0;
-	while (str)
+	while (*str)
 	{
-		if (*str == '%' && ft_strchr("cspudixX%", *str + 1))
-			count = count + ft_check_parameter(*str + 1, args);
+		if (*str == '%' && ft_strchr("cspudixX%", *(str + 1)))
+		{
+			str++;
+			count += ft_check_parameter(*str, args);
+		}
 		else
 		{
-			write(1, &str, 1);
+			write(1, str, 1);
 			count++;
 		}
 		str++;

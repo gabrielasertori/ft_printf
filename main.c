@@ -5,7 +5,7 @@
 
 int	main(void)
 {
-	ft_printf("test");
-	printf("test");
+	ft_printf("%x", 42);
+	//printf("%x",  420000);
 	return (0);
 }

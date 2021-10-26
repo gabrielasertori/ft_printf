@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 19:48:27 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2021/10/21 19:51:40 by gcosta-d         ###   ########.fr       */
+/*   Updated: 2021/10/25 21:25:30 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,8 @@ static char	*ft_strint(char *str, unsigned int len, long n, int base)
 	len = len - 1;
 	while (n)
 	{
-		if(n >= 10)
-			str[len] = (n % base) + 97;//(n - 10)?;
+		if(n % base >= 10)
+			str[len] = ((n % base) - 10) + 'a';//(n - 10)?;
 		else
 			str[len] = (n % base) + 48;
 		n = n / base;
