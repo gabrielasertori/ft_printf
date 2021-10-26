@@ -6,13 +6,13 @@
 #    By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/25 22:35:24 by lkrebs-l          #+#    #+#              #
-#    Updated: 2021/10/25 22:43:05 by lkrebs-l         ###   ########.fr        #
+#    Updated: 2021/10/25 22:49:15 by lkrebs-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 CC = clang
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra 
 SRC = ft_itoa_base.c ft_printf_utils.c ft_printf.c treat_base10.c \
 		treat_base16.c treat_char.c
 OBJ = $(SRC:.c=.o)
@@ -23,9 +23,9 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar -rc $(NAME) $(OBJ) ft_printf.h
+	ar -rc $(NAME) $(OBJ)
 
-clean: $(OBJ)
+clean: 
 	rm -f $(OBJ)
 
 fclean: clean
