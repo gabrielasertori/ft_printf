@@ -5,3 +5,4 @@ printf_repos/
 ft_printf.h.gch
 printfTester
 includes
+main.c

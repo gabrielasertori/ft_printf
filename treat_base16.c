@@ -20,7 +20,6 @@ int	ft_print_x(unsigned int hex)
 	str = ft_itoa_base(hex, 16);
 	count = ft_putstr(str);
 	free(str);
-	str = NULL;
 	return (count);
 }
 
@@ -40,7 +39,6 @@ int	ft_print_X(unsigned int hex_upper)
 	}
 	count = ft_putstr(str);
 	free(str);
-	str = NULL;
 	return (count);
 }
 
@@ -54,6 +52,5 @@ int	ft_print_p(unsigned int pointer)
 	str = ft_itoa_base(pointer, 16);
 	count = ft_putstr(str);
 	free(str);
-	str = NULL;
 	return(count);
 }
