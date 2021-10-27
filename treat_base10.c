@@ -20,6 +20,7 @@ int	ft_print_u(unsigned int num)
 	str = ft_itoa_base(num, 10);
 	count = ft_putstr(str);
 	free(str);
+	str = NULL;
 	return (count);
 }
 
