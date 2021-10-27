@@ -19,6 +19,7 @@ int	ft_print_u(unsigned int num)
 
 	str = ft_itoa_base(num, 10);
 	count = ft_putstr(str);
+	free(str);
 	return (count);
 }
 
@@ -29,5 +30,7 @@ int	ft_print_int(int decimal)
 
 	str = ft_itoa_base(decimal, 10);
 	count = ft_putstr(str);
+	free(str);
+	str = NULL;
 	return (count);
 }
