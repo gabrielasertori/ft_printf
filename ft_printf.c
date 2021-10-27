@@ -56,8 +56,8 @@ int	ft_check_parameter(char c, va_list arg)
 	else if (c == 'u')
 		count = ft_print_u(va_arg(arg, unsigned int));
 	else if (c == 'p')
-		count = ft_print_p(va_arg(arg, unsigned int));
-	else if(c == 'x')
+		count = ft_print_p(va_arg(arg, unsigned long)); // <-- testing with long
+	else if(c == 'x')									// instead of int
 		count = ft_print_x(va_arg(arg, unsigned int));
 	else if (c == 'X')
 		count = ft_print_X(va_arg(arg, unsigned int));

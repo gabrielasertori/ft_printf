@@ -42,7 +42,7 @@ int	ft_print_X(unsigned int hex_upper)
 	return (count);
 }
 
-int	ft_print_p(unsigned int pointer)
+int	ft_print_p(unsigned long pointer)
 {
 	int		count;
 	char	*str;
