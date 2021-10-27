@@ -23,6 +23,8 @@ int	ft_print_s(char *str)
 	int	count;
 
 	count = 0;
+	if (!str)
+		return (NULL);
 	while (*str)
 	{
 		write(1, str, 1);
