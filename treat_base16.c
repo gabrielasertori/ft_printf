@@ -50,7 +50,7 @@ int	ft_print_p(unsigned int pointer)
 	ft_putstr("0x");
 	count = 2;
 	str = ft_itoa_base(pointer, 16);
-	count = ft_putstr(str);
+	count += ft_putstr(str);
 	free(str);
 	return(count);
 }
