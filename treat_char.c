@@ -25,7 +25,7 @@ int	ft_print_s(char *str)
 	count = 0;
 	if (!str)
 	{
-		ft_strdup("(null)");
+		write(1, "(null)", 6);
 		return (6);
 	}
 	while (*str)
