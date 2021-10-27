@@ -24,7 +24,10 @@ int	ft_print_s(char *str)
 
 	count = 0;
 	if (!str)
-		return (0);
+	{
+		ft_strdup("(null)");
+		return (6);
+	}
 	while (*str)
 	{
 		write(1, str, 1);
