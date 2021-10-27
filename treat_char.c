@@ -24,7 +24,7 @@ int	ft_print_s(char *str)
 
 	count = 0;
 	if (!str)
-		return (NULL);
+		return (0);
 	while (*str)
 	{
 		write(1, str, 1);
