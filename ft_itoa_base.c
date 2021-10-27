@@ -6,13 +6,13 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 19:48:27 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2021/10/26 21:02:21 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2021/10/26 21:49:57 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static size_t	ft_intlen(int n, int base);
+static size_t	ft_intlen(long n, int base);
 static char	*ft_strint(char *str, unsigned int len, long n, int base);
 
 char	*ft_itoa_base(long num, int base)
@@ -31,17 +31,17 @@ char	*ft_itoa_base(long num, int base)
 	return (ft_strint(str, len, num, base));
 }
 
-static size_t	ft_intlen(int n, int base)
+static size_t	ft_intlen(long num, int base)
 {
 	size_t	i;
 
 	i = 0;
-	if (n < 0)
+	if (num < 0)
 		i++;
-	while (n)
+	while (num)
 	{
 		i++;
-		n = n / base;
+		num = num / base;
 	}
 	return (i);
 }
@@ -58,7 +58,7 @@ static char	*ft_strint(char *str, unsigned int len, long n, int base)
 	while (n)
 	{
 		if(n % base >= 10)
-			str[len] = ((n % base) - 10) + 'a';//(n - 10)?;
+			str[len] = ((n % base) - 10) + 'a';//(- 10)?;
 		else
 			str[len] = (n % base) + 48;
 		n = n / base;
