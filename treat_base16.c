@@ -19,6 +19,7 @@ int	ft_print_x(unsigned int hex)
 
 	str = ft_itoa_base(hex, 16);
 	count = ft_putstr(str);
+	free(str);
 	return (count);
 }
 

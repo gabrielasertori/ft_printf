@@ -6,7 +6,7 @@
 /*   By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 23:01:18 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2021/10/26 20:22:32 by lkrebs-l         ###   ########.fr       */
+/*   Updated: 2021/10/26 21:03:08 by lkrebs-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,21 +61,4 @@ char	*ft_strdup(const char *src)
 	}
 	dst[i] = '\0';
 	return (dst);
-}
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
-{
-	size_t	i;
-
-	i = 0;
-	if (dstsize)
-	{
-		while (src[i] && i < dstsize - 1)
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = '\0';
-	}
-	return (ft_strlen(src));
 }
