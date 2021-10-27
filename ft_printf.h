@@ -12,6 +12,7 @@
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
+# define INT_MIN -2147483648
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -23,12 +24,11 @@ char	*ft_strchr(const char *string, int c);
 char	*ft_itoa_base(long num, int base);
 size_t	ft_strlen(const char *string);
 char	*ft_strdup(const char *src);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 int		ft_print_c(int c);
 int		ft_print_s(char *str);
 int		ft_print_int(int decimal);
 int		ft_print_u(unsigned int num);
-int		ft_print_p(unsigned int pointer);
+int		ft_print_p(unsigned long pointer);
 int		ft_print_x(unsigned int hex);
 int		ft_print_X(unsigned int hex_upper);
 
