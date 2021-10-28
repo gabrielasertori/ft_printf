@@ -42,13 +42,15 @@ int	ft_print_X(unsigned int hex_upper)
 	return (count);
 }
 
-int	ft_print_p(unsigned long pointer)
+int	ft_print_p(long pointer)
 {
 	int		count;
 	char	*str;
+	//unsigned long	aux;
 
 	ft_putstr("0x");
 	count = 2;
+	//aux = pointer;
 	str = ft_itoa_base(pointer, 16);
 	count += ft_putstr(str);
 	free(str);

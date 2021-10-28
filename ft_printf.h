@@ -28,7 +28,7 @@ int		ft_print_c(int c);
 int		ft_print_s(char *str);
 int		ft_print_int(int decimal);
 int		ft_print_u(unsigned int num);
-int		ft_print_p(unsigned long pointer);
+int		ft_print_p(long pointer);
 int		ft_print_x(unsigned int hex);
 int		ft_print_X(unsigned int hex_upper);
 
