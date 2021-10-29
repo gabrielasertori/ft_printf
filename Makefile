@@ -3,18 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lkrebs-l <lkrebs-l@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/25 22:35:24 by lkrebs-l          #+#    #+#              #
-#    Updated: 2021/10/25 22:49:15 by lkrebs-l         ###   ########.fr        #
+#    Updated: 2021/10/28 21:46:05 by gcosta-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 CC = clang
-FLAGS = -Wall -Werror -Wextra 
-SRC = ft_itoa_base.c ft_printf_utils.c ft_printf.c treat_base10.c \
-		treat_base16.c treat_char.c
+FLAGS = -Wall -Werror -Wextra
+SRC = ft_utoa_base.c ft_printf_utils.c ft_printf.c treat_base10.c \
+		treat_base16.c treat_char.c ft_itoa.c
 OBJ = $(SRC:.c=.o)
 
 %.o: %.c
@@ -25,7 +25,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar -rc $(NAME) $(OBJ)
 
-clean: 
+clean:
 	rm -f $(OBJ)
 
 fclean: clean
