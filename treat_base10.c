@@ -17,7 +17,7 @@ int	ft_print_u(unsigned int num)
 	int		count;
 	char	*str;
 
-	str = ft_itoa_base(num, 10);
+	str = ft_itoa(num);
 	count = ft_putstr(str);
 	free(str);
 	return (count);
@@ -28,7 +28,7 @@ int	ft_print_int(int decimal)
 	int		count;
 	char	*str;
 
-	str = ft_itoa_base(decimal, 10);
+	str = ft_itoa(decimal);
 	count = ft_putstr(str);
 	free(str);
 	return (count);

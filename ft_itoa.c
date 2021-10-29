@@ -1,54 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcosta-d <gcosta-d@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/21 19:48:27 by lkrebs-l          #+#    #+#             */
-/*   Updated: 2021/10/28 18:55:10 by gcosta-d         ###   ########.fr       */
+/*   Created: 2021/10/28 21:31:24 by gcosta-d          #+#    #+#             */
+/*   Updated: 2021/10/28 21:43:45 by gcosta-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static size_t	ft_intlen(long n, int base);
-static char	*ft_strint(char *str, long len, long n, int base);
+static char	*ft_strint(char *str, size_t len, int n);
+static size_t	ft_intlen(int n);
 
-char	*ft_itoa_base(long num, int base)
+char	*ft_itoa(int n)
 {
-	unsigned int	len;
-	char			*str;
+	size_t	len;
+	char	*str;
 
-	//if (num < 0 && num < INT_MIN)
-		//num *= -1;
-	if (num == 0)
+	if (n == 0)
 		return (ft_strdup("0"));
-	if (num == -2147483648)
+	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
-	len = ft_intlen(num, base);
+	len = ft_intlen(n);
 	str = (char *)malloc(len + 1 * sizeof(char));
 	if (str == NULL)
 		return (NULL);
-	return (ft_strint(str, len, num, base));
+	return (ft_strint(str, len, n));
 }
 
-static size_t	ft_intlen(long num, int base)
+static size_t	ft_intlen(int n)
 {
 	size_t	i;
 
 	i = 0;
-	if (num < 0)
+	if (n < 0)
 		i++;
-	while (num)
+	while (n)
 	{
 		i++;
-		num = num / base;
+		n = n / 10;
 	}
 	return (i);
 }
 
-static char	*ft_strint(char *str, long len, long n, int base)
+static char	*ft_strint(char *str, size_t len, int n)
 {
 	if (n < 0)
 	{
@@ -59,11 +57,8 @@ static char	*ft_strint(char *str, long len, long n, int base)
 	len = len - 1;
 	while (n)
 	{
-		if(n % base >= 10)
-			str[len] = ((n % base) - 10) + 'a';//(- 10)?;
-		else
-			str[len] = (n % base) + 48;
-		n = n / base;
+		str[len] = (n % 10) + 48;
+		n = n / 10;
 		len--;
 	}
 	return (str);

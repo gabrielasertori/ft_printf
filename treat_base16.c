@@ -11,13 +11,14 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 int	ft_print_x(unsigned int hex)
 {
 	int count;
 	char *str;
 
-	str = ft_itoa_base(hex, 16);
+	str = ft_utoa_base(hex, 16);
 	count = ft_putstr(str);
 	free(str);
 	return (count);
@@ -29,7 +30,7 @@ int	ft_print_X(unsigned int hex_upper)
 	char *str;
 	int	i;
 
-	str = ft_itoa_base(hex_upper, 16);
+	str = ft_utoa_base(hex_upper, 16);
 	i = 0;
 	while (str[i])
 	{
@@ -42,16 +43,14 @@ int	ft_print_X(unsigned int hex_upper)
 	return (count);
 }
 
-int	ft_print_p(long pointer)
+int	ft_print_p(unsigned long pointer)
 {
 	int		count;
 	char	*str;
-	//unsigned long	aux;
 
 	ft_putstr("0x");
 	count = 2;
-	//aux = pointer;
-	str = ft_itoa_base(pointer, 16);
+	str = ft_utoa_base(pointer, 16);
 	count += ft_putstr(str);
 	free(str);
 	return(count);
