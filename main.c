@@ -6,8 +6,8 @@
 int	main(void)
 {
 	int a, b;
-	a = ft_printf("FT: %X\n", -214748364);
-	b = printf("FT: %X\n", -214748364);
+	a = ft_printf("FT: %u\n", -1);
+	b = printf("ORIGINAL: %u\n", -1);
 	printf("LEN: %d\nLEN: %d\n", a, b);
 	return (0);
 }
