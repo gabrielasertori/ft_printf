@@ -66,16 +66,6 @@ for more details and references, you can access this link:<br>
 - main.c has the test.
 - When we compile with the first part of the command line, it's going to be generate an executable file so the ```&& ./a.out``` is saying to compiler to also execute it.
 
-
-## ⭐ Bonus part
-
-GNL version 10 hasn't many bonus part. The instructions are:
-
-- Read from various file descriptors at the same time.
-- Use only one static variable.
-
-The standard code already has the bonus part included, it was write considering the above rules.
-
 ## 🤝 Contributors
 
 The collab:
