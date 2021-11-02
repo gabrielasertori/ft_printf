@@ -1,7 +1,7 @@
 <div align="center">
 	<div style="margin-bottom:3%">
 		<a href="https://www.42sp.org.br/">
-			<img src="./.img/gnl.png" alt="ft_printf logo"/>
+			<img src="./.image/ft_printfn.png" alt="ft_printf logo"/>
 		</a>
 	</div>
 	<div>
@@ -52,8 +52,8 @@ The printf can print a lot of types of data, and we are covering just a few of t
 - `%X` print a number in hexadecimal (base 16), with uppercase.
 - `%%` print a percent sign.
 
-for more details and references, you can access this link:<br>
-<a href="https://www.man7.org/linux/man-pages/man3/printf.3.html">Printf manual page</a>
+For more details and references, you can access this link: 
+<a href="https://www.man7.org/linux/man-pages/man3/printf.3.html">Printf manual page</a> 
 
 
 ## ⌨️ How to compile it
